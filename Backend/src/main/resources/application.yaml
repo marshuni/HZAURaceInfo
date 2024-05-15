@@ -1,5 +1,11 @@
 spring:
     application:
         name: hzauraceinfo
+    datasource:
+        url: jdbc:mysql://****.com:3306
+        username: ******
+        password: ******
 server:
     port: 8082
+
+    
