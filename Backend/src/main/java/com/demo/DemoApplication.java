@@ -1,13 +1,13 @@
-package com.hzausoft.hzauraceinfo;
+package com.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RaceinfoApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RaceinfoApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package com.hzausoft.hzauraceinfo;
+package com.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HzauraceinfoApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
