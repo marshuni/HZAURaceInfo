@@ -1,65 +1,37 @@
 package com.demo.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "reviews")
 public class Review {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private Long userId;
-    private Long contestId;
+    private int RID;
+    private String UID;
+    private int CID;
     private int value;
     private int difficultyContest;
     private int difficultyPrize;
     private String comment;
 
-    @ManyToOne
-    private Reviewer reviewer;
-
-    public Review() {
+    // getters and setters
+    public int getRID() {
+        return RID;
     }
 
-    public Review(Long userId, Long contestId, int value, int difficultyContest, int difficultyPrize， String comment, Reviewer reviewer) {
-        this.userId = userId;
-        this.contestId = contestId;
-        this.value = value;
-        this.difficultyContest = difficultyContest;
-        this.difficultyPrize = difficultyPrize;
-        this.comment = comment;
-        this.reviewer = reviewer;
+    public void setRID(int RID) {
+        this.RID = RID;
     }
 
-    public Long getId() {
-        return id;
+    public String getUID() {
+        return UID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUID(String UID) {
+        this.UID = UID;
     }
 
-    public Long getUserId() {
-        return userId;
+    public int getCID() {
+        return CID;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public Long getContestId() {
-        return contestId;
-    }
-
-    public void setContestId(Long contestId) {
-        this.contestId = contestId;
+    public void setCID(int CID) {
+        this.CID = CID;
     }
 
     public int getValue() {
@@ -93,14 +65,4 @@ public class Review {
     public void setComment(String comment) {
         this.comment = comment;
     }
-
-    public Reviewer getReviewer() {
-        return reviewer;
-    }
-
-    public void setReviewer(Reviewer reviewer) {
-        this.reviewer = reviewer;
-    }
-
-    // 其它属性和方法
 }

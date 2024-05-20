@@ -1,20 +1,9 @@
 package com.demo.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.Date;
 
-@Entity
-@Table(name = "contests")
 public class Contest {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    private int ID;
     private String name;
     private String level;
     private String category;
@@ -26,29 +15,13 @@ public class Contest {
     private String detail;
     private String poster;
 
-    public Contest() {
+    // getters and setters
+    public int getID() {
+        return ID;
     }
 
-    public Contest(String name, String level, String category, String publisher, Date entryStart, Date entryEnd,
-                   Date contestStart, Date contestEnd, String detail, String poster) {
-        this.name = name;
-        this.level = level;
-        this.category = category;
-        this.publisher = publisher;
-        this.entryStart = entryStart;
-        this.entryEnd = entryEnd;
-        this.contestStart = contestStart;
-        this.contestEnd = contestEnd;
-        this.detail = detail;
-        this.poster = poster;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getName() {
@@ -130,6 +103,4 @@ public class Contest {
     public void setPoster(String poster) {
         this.poster = poster;
     }
-
-    // 其它属性和方法
 }
